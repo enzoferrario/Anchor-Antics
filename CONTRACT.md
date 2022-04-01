@@ -19,4 +19,4 @@ Contributions:
   Penalties:
     We will start off by nagging and talking out issues should any arise. From there, if the problem still persists then we will send warning email with instructor CC'd. Finally, if nothing changes, we will have a unanimous vote kick trial for them.
 
-    Aidan Pavlik
+    Aidan Michael Pavlik
