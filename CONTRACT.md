@@ -21,3 +21,4 @@ Contributions:
 
     Aidan Michael Pavlik
     Nathan Juno Ahn
+    Vincenzo James Fasano
