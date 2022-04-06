@@ -37,6 +37,8 @@ var anchors = [
   }
 ]
 
+
+/*
 if (html.id === 'home-page') {
 
 
@@ -104,7 +106,7 @@ if (html.id === 'home-page') {
 
 
 }
-
+*/
 //Not Currently Using this, but will in the Future
 
 
