@@ -11,7 +11,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 html {
   font-size: large;
-  font-family: "Inconsolata", monospace;
+  font-family: "Inconsolata", monospace, sans-serif;
   line-height: normal;
   background-color: #d9f0a3;
 }
@@ -77,4 +77,13 @@ img {
   flex-flow: row wrap;
   height: auto;
   max-width: 100%;
+}
+
+@media (min-width: 1235px) {
+  section li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
 }
