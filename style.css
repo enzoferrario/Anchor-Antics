@@ -10,36 +10,29 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 
 html {
-
   font-size: large;
-  font-family: "Inconsolata", monospace;
+  font-family: "Inconsolata", monospace, sans-serif;
   line-height: normal;
   background-color: #d9f0a3;
 }
 
 h1 {
-
   font-size: 5em;
   background-color: #00ffe5;
   padding: 0.25em;
 }
 
-
 h2 {
-
   font-size: 3em;
 }
 
 nav {
-
   background-color: #00ffe5;
   padding: 0;
   text-align: center;
 }
 
 nav li {
-
-  display: inline-grid;
   text-align: center;
   padding: 1em;
   text-indent: 0;
@@ -47,42 +40,50 @@ nav li {
 }
 
 nav li:hover {
-
   background-color: #008a7c;
 }
 
-input {
-
-  display: grid;
-  font-size: 2em;
-  margin: 0.25em;
-  min-width: 100%;
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   max-width: 100%;
 }
 
-
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2em;
+  margin: 0.25em;
+  width: 100%;
+}
 
 section {
-
   background-color: #5cffbe;
   padding: 2em;
 }
 
-
 #content {
-
   padding: 0.5em;
 }
 
-
 p {
-
   font-size: 1.5em;
 }
 
 img {
-
+  display: flex;
+  flex-flow: row wrap;
   height: auto;
   max-width: 100%;
+}
 
+@media (min-width: 1235px) {
+  section li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
 }
