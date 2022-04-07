@@ -61,13 +61,10 @@ ul {
 input {
 
   display: flex;
+  min-width: 0;
   font-size: 2em;
   margin: 0.25em;
-  min-width: 100%;
-  max-width: 100%;
 }
-
-
 
 section {
 
@@ -75,12 +72,10 @@ section {
   padding: 2em;
 }
 
-
 #content {
 
   padding: 0.5em;
 }
-
 
 p {
 
@@ -90,6 +85,7 @@ p {
 img {
 
   display: flex;
+  flex-flow: row wrap;
   height: auto;
   max-width: 100%;
 
