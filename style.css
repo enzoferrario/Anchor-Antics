@@ -10,7 +10,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 
 html {
-
   font-size: large;
   font-family: "Inconsolata", monospace;
   line-height: normal;
@@ -18,28 +17,22 @@ html {
 }
 
 h1 {
-
   font-size: 5em;
   background-color: #00ffe5;
   padding: 0.25em;
 }
 
-
 h2 {
-
   font-size: 3em;
 }
 
 nav {
-
-
   background-color: #00ffe5;
   padding: 0;
   text-align: center;
 }
 
 nav li {
-
   text-align: center;
   padding: 1em;
   text-indent: 0;
@@ -47,12 +40,10 @@ nav li {
 }
 
 nav li:hover {
-
   background-color: #008a7c;
 }
 
 ul {
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -60,7 +51,6 @@ ul {
 }
 
 input {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,26 +60,21 @@ input {
 }
 
 section {
-
   background-color: #5cffbe;
   padding: 2em;
 }
 
 #content {
-
   padding: 0.5em;
 }
 
 p {
-
   font-size: 1.5em;
 }
 
 img {
-
   display: flex;
   flex-flow: row wrap;
   height: auto;
   max-width: 100%;
-
 }
