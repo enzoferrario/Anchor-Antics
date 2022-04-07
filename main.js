@@ -38,10 +38,40 @@ var anchors = [
 ]
 
 
-/*
+
 if (html.id === 'home-page') {
 
+  var bt = document.getElementById('Add-to-Cart-one');
+  bt.addEventListener('click', function(){
 
+
+    addToCart("cart-name-one", "cart-price-one", "Built for a Battleship", 1700);
+
+
+  });
+
+
+
+}
+
+function addToCart (cartName, cartPrice, itemName, itemPrice){
+
+document.getElementById(cartName).innerText = itemName
+document.getElementById(cartPrice).innerText = itemPrice
+
+
+
+
+
+}
+
+function removeButton (but){
+
+  but.style.display = "none"
+
+
+}
+/*
   var numOne = Math.floor(Math.random() * (10 - 0) + 0);
   var numTwo = Math.floor(Math.random() * (10 - 0) + 0);
   var numThree = Math.floor(Math.random() * (10 - 0) + 0);
