@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--Note 1: I want to make smaller images of current ones available and use them for the review pages-->
+<!--Note 2: I want to make the payment and shipping on the side in desktop mode, and scroll works fine for mobile -->
+<!--Note 3: Is  it just me or is h3 too small? Will either change it myself or ask someone to do that later-->
+<!--Note 4: Make a confirm order page later-->
+
   <html lang="en" id = "review-page">
     <head>
       <meta charset="utf-8" />
@@ -28,18 +33,102 @@
           </ul>
         </nav>
       </header>
-      <h2>Review Order</h2>
       <main id="content">
-        <ul>
-          <li id="item-one-final">Built for a Battleship: 1699.99</li>
-          <li id="item-two-final">Oceans Gem: 450.99</li>
-          <li id="item-three-final">The Grappler: 29.99</li>
-          <li id="item-four-final">Black Pearl: 75.99</li>
-        </ul>
-        <p>Total: $2,256.96</p>
+        <article class="cart">
+          <h2>Review Order</h2>
+          <h3>Cart</h3>
+          <section>
+            <p id="name-one">Name: Built for a Battleship</p>
+            <p id="price-one">Price: $1699.99</p>
+            <p id="weight-one">Weight: 762</p>
+            <img id="image-one" src="assets/battleShip.jpg" alt="battleship-anchor" />
+          </section>
+          <section>
+            <p id="name-two">Name: Oceans Gem</p>
+            <p id="price-two">Price: $450.99</p>
+            <p id="weight-two">Weight: 120</p>
+            <img id="image-two" src="assets/blueOcean.jpg" alt="blue-ocean-anchor" />
+          </section>
+          <section>
+            <p id="name-three">Name: The Grappler </p>
+            <p id="price-three">Price: $29.99</p>
+            <p id="weight-three">Weight: 55</p>
+            <img id="image-three" src="assets/theGrapplingHook.jpg" alt="grappler-image" />
+          </section>
+          <section>
+            <p id="name-four">Name: Black Pearl</p>
+            <p id="price-four">Price: $75.99</p>
+            <p id="weight-four">Weight: 45</p>
+            <img id="image-four" src="assets/blackPearl.jpg" alt="black-pearl-image" />
+          </section>
+          <section>
+            <p id="name-five">Name: Four Pronged Glory</p>
+            <p id="price-five">Price: $45.99</p>
+            <p id="weight-five">Weight: 87</p>
+            <img id="image-five" src="assets/4Prong.jpg" alt="Four-Prong-image" />
+          </section>
+          <section>
+            <p id="name-six">Name: Modern</p>
+            <p id="price-six">Price: $49.99</p>
+            <p id="weight-six">Weight: 35</p>
+            <img id="image-six" src="assets/modern.jpg" alt="modern-image" />
+          </section>
+          <section>
+            <p id="name-seven">Name: Pirates Treasure</p>
+            <p id="price-seven">Price: $12,000</p>
+            <p id="weight-seven">Weight: 12</p>
+            <img id="image-seven" src="assets/PiratesBounty.jpeg" alt="pirates-treasure-image" />
+          </section>
+          <section>
+            <p id="name-eight">Name: Rusted Beauty</p>
+            <p id="price-eight">Price: $9.99</p>
+            <p id="weight-eight">Weight: 63</p>
+            <img id="image-eight" src="assets/rustedBeauty.jpg" alt="rusted-beauty-image" />
+          </section>
+          <section>
+            <p id="name-nine">Name: The Spoon</p>
+            <p id="price-nine">Price: $43.99</p>
+            <p id="weight-nine">Weight: 88</p>
+            <img id="image-nine" src="assets/theSpoon.jpg" alt="spoon-image" />
+          </section>
+          <section>
+            <p id="name-ten">Name: Wooden Master</p>
+            <p id="price-ten">Price: $7.99</p>
+            <p id="weight-ten">Weight: 45</p>
+            <img id="image-ten" src="assets/woodenMaster.jpg" alt="wooden-master-image" />
+          </section>
+          <section>
+            <p id="name-eleven">Name: Golden Modern</p>
+            <p id="price-eleven">Price: $15,000</p>
+            <p id="weight-eleven">Weight: 360</p>
+            <img id="image-eleven" src="assets/golden-modern.png" alt="golden-modern-image" />
+          </section>
+          <section>
+            <p id="name-twelve">Name: Almost and Anchor</p>
+            <p id="price-twelve">Price: $5.00</p>
+            <p id="weight-twelve">Weight: 3</p>
+            <img id="image-twelve" src="assets/almost-an-anchor.jpg" alt="almost-an-anchor-image" />
+          </section>
+        </article>
+
+        <article class="shipping">
+          <h3>Shipping Address</h3>
+          <section>
+            <p id="address">3101 S Wabash Ave</p>
+            <p id="city-state-zip">Chicago, IL, 60616</p>
+          </section>
+        </article>
+
+        <article class="payment">
+          <h3>Payment Method</h3>
+          <section>
+            <p id="card-num-short">*credit or debit* ending in *last 4 digits of card num*</p>
+            <p id="card-expiration">Expires *date*</p>
+          </section>
+        </article>
       </main>
-      <form action="../shipping/">
-        <button type="submit">Go Back to Shipping</button>
+      <form action="../confirm">
+        <button type="submit">Confirm Order</button>
       </form>
       <footer id="footer">
         <p>Site content for Aidan's Anchors for All'</p>
