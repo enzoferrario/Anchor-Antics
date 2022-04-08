@@ -59,20 +59,32 @@ var anchors = [
 if (html.id === 'home-page') {
 
   var cart = [];
-  var bt = document.getElementById('Add-to-Cart-one');
 
-  
-  bt.addEventListener('click', function(){
 
-    cart.push(anchors[1])
-    localStorage.setItem("Cart", cart);
-    addToCart("cart-name-one", "cart-price-one", "Built for a Battleship", 1700);
 
+
+addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700)
+
+
+
+
+  function addToCartButtons (bt, cartName, cartPrice, itemName, itemPrice){
+
+    var bt = document.getElementById(bt);
+
+
+    bt.addEventListener('click', function(){
+
+      cart.push(anchors[1])
+      localStorage.setItem("Cart", cart);
+      addToCart(cartName, cartPrice, itemName, itemPrice);
+
+      //For testing purposes
+      //document.getElementById("cart-name-two").innerText = cart;
   });
-
-
-
 }
+}
+
 
 function addToCart (cartName, cartPrice, itemName, itemPrice){
 
