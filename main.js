@@ -59,12 +59,7 @@ var anchors = [
 if (html.id === 'home-page') {
 
   var cart = [];
-
   var cartText = " "
-
-
-
-
 
 addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700.00, 1)
 addToCartButtons("Add-to-Cart-two", "cart-name-two", 'cart-price-two', "Oceans Gem", 450.99, 2)
@@ -80,46 +75,33 @@ addToCartButtons("Add-to-Cart-eleven", "cart-name-eleven", 'cart-price-eleven', 
 addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', "Almost an Anchor", 5.00, 12)
 
 
-
-
-
   function addToCartButtons (bt, cartName, cartPrice, itemName, itemPrice, pos){
 
     var bt = document.getElementById(bt);
-
-
     bt.addEventListener('click', function(){
 
       cart.push(anchors[pos])
       localStorage.setItem("Cart", cart);
       //addToCart(cartName, cartPrice, itemName, itemPrice);
 
-
-      cartText += " \n\nItem Name: " + itemName + " \nPrice: " + itemPrice;
-
-
-
-      //For testing purposes
+      cartText += " \n\nItem Name: " + itemName + " \nPrice: $" + itemPrice + "\nRemove";
       document.getElementById("cart-start").innerText = cartText;
   });
 }
 }
 
 
+
+//Not really needed anymore, but keeping in case needed in the future
 function addToCart (cartName, cartPrice, itemName, itemPrice){
 
 document.getElementById(cartName).innerText = itemName
 document.getElementById(cartPrice).innerText = itemPrice
 
-
-
-
-
 }
 
-function removeButton (but){
+function removeButton (bt){
 
-  but.style.display = "none"
 
 
 }
@@ -189,9 +171,7 @@ function removeButton (but){
 
 }
 */
-//Not Currently Using this, but will in the Future
-
-
+/*Not Currently Using this, but will in the Future
 if (html.id === 'review-page') {
 
 
@@ -217,7 +197,7 @@ if (html.id === 'review-page') {
 
 }
 
-
+*/
 
 
 /*
