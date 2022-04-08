@@ -60,23 +60,24 @@ if (html.id === 'home-page') {
 
   var cart = [];
 
+  var cartText = " "
 
 
 
 
 
-addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700, 1)
-addToCartButtons("Add-to-Cart-two", "cart-name-two", 'cart-price-two', "Built for a Battleship", 1700, 2)
-addToCartButtons("Add-to-Cart-three", "cart-name-three", 'cart-price-three', "Built for a Battleship", 1700, 3)
-addToCartButtons("Add-to-Cart-four", "cart-name-four", 'cart-price-four', "Built for a Battleship", 1700, 4)
-addToCartButtons("Add-to-Cart-five", "cart-name-five", 'cart-price-five', "Built for a Battleship", 1700, 5)
-addToCartButtons("Add-to-Cart-six", "cart-name-six", 'cart-price-six', "Built for a Battleship", 1700, 6)
-addToCartButtons("Add-to-Cart-seven", "cart-name-seven", 'cart-price-seven', "Built for a Battleship", 1700, 7)
-addToCartButtons("Add-to-Cart-eight", "cart-name-eight", 'cart-price-eight', "Built for a Battleship", 1700, 8)
-addToCartButtons("Add-to-Cart-nine", "cart-name-nine", 'cart-price-nine', "Built for a Battleship", 1700, 9)
-addToCartButtons("Add-to-Cart-ten", "cart-name-ten", 'cart-price-ten', "Built for a Battleship", 1700, 10)
-addToCartButtons("Add-to-Cart-eleven", "cart-name-eleven", 'cart-price-eleven', "Built for a Battleship", 1700, 11)
-addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', "Built for a Battleship", 1700, 12)
+addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700.00, 1)
+addToCartButtons("Add-to-Cart-two", "cart-name-two", 'cart-price-two', "Oceans Gem", 450.99, 2)
+addToCartButtons("Add-to-Cart-three", "cart-name-three", 'cart-price-three', "The Grappler", 29.99, 3)
+addToCartButtons("Add-to-Cart-four", "cart-name-four", 'cart-price-four', "Black Pearl", 75.99, 4)
+addToCartButtons("Add-to-Cart-five", "cart-name-five", 'cart-price-five', "Four Pronged Glory", 45.99, 5)
+addToCartButtons("Add-to-Cart-six", "cart-name-six", 'cart-price-six', "Modern", 49.99, 6)
+addToCartButtons("Add-to-Cart-seven", "cart-name-seven", 'cart-price-seven', "Pirates Treasure", 12000.00, 7)
+addToCartButtons("Add-to-Cart-eight", "cart-name-eight", 'cart-price-eight', "Rusted Beauty", 9.99, 8)
+addToCartButtons("Add-to-Cart-nine", "cart-name-nine", 'cart-price-nine', "The Spoon", 43.99, 9)
+addToCartButtons("Add-to-Cart-ten", "cart-name-ten", 'cart-price-ten', "Wooden Master", 7.99, 10)
+addToCartButtons("Add-to-Cart-eleven", "cart-name-eleven", 'cart-price-eleven', "Golden Modern", 15000.00, 11)
+addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', "Almost an Anchor", 5.00, 12)
 
 
 
@@ -91,10 +92,15 @@ addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', 
 
       cart.push(anchors[pos])
       localStorage.setItem("Cart", cart);
-      addToCart(cartName, cartPrice, itemName, itemPrice);
+      //addToCart(cartName, cartPrice, itemName, itemPrice);
+
+
+      cartText += " \n\nItem Name: " + itemName + " \nPrice: " + itemPrice;
+
+
 
       //For testing purposes
-      //document.getElementById("cart-name-two").innerText = cart;
+      document.getElementById("cart-start").innerText = cartText;
   });
 }
 }
