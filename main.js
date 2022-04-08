@@ -6,17 +6,25 @@ document.querySelector('html').className = 'js';
 var anchors = [
 
   {
-    name:"4 Pronged Glory", price:45.99, weight:87, image:"assets/4Prong.jpg"
-  },
-  {
     name:"Built for a Battleship", price:1699.99, weight:762, image:"assets/battleShip.jpg"
   },
-  {
-    name:"Black Pearl", price:75.99, weight:45, image:"assets/blackPearl.jpg"
-  },
+
   {
     name:"Oceans Gem", price:450.99, weight:120, image:"assets/blueOcean.jpg"
   },
+
+  {
+    name:"The Grappler", price:29.99, weight:55, image:"assets/theGrapplingHook.jpg"
+  },
+
+  {
+    name:"Black Pearl", price:75.99, weight:45, image:"assets/blackPearl.jpg"
+  },
+
+  {
+    name:"4 Pronged Glory", price:45.99, weight:87, image:"assets/4Prong.jpg"
+  },
+
   {
     name:"Modern", price:49.99, weight:35, image:"assets/modern.jpg"
   },
@@ -26,27 +34,39 @@ var anchors = [
   {
     name:"Rusted Beauty", price:9.99, weight:63, image:"assets/rustedBeauty.jpg"
   },
-  {
-    name:"The Grappler", price:29.99, weight:55, image:"assets/theGrapplingHook.jpg"
-  },
+
   {
     name:"The Spoon", price:43.99, weight:88, image:"assets/theSpoon.jpg"
   },
   {
     name:"Wooden Master", price:7.99, weight:5, image:"assets/woodenMaster.jpg"
+  },
+
+  {
+    name:"Golden Modern", price: 15.00, weight:360, image:"assets/golden-modern.png"
+  },
+
+  {
+    name:"Almost an Anchor", price:5.00, weight:3, image:"assets/almost-an-anchor.jpg"
   }
+
+
 ]
 
+//var cart = [[item1, item2], [item1,item2]];
 
 
 if (html.id === 'home-page') {
 
+  var cart = [];
   var bt = document.getElementById('Add-to-Cart-one');
+
+  
   bt.addEventListener('click', function(){
 
-
+    cart.push(anchors[1])
+    localStorage.setItem("Cart", cart);
     addToCart("cart-name-one", "cart-price-one", "Built for a Battleship", 1700);
-
 
   });
 
