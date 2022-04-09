@@ -72,6 +72,11 @@ p {
   font-size: 1.5em;
 }
 
+#content section {
+  border-left: 0.51em solid #008a7c;
+  margin-bottom: 0.5em;
+}
+
 #cart-start {
   background-color: #8FBC8F;
   border: dashed;
