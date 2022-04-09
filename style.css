@@ -72,6 +72,10 @@ p {
   font-size: 1.5em;
 }
 
+#cart-start {
+  background-color: #8FBC8F;
+}
+
 img {
   display: flex;
   flex-flow: row wrap;
