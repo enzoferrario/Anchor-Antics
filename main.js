@@ -84,7 +84,7 @@ addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', 
       localStorage.setItem("Cart", cart);
       //addToCart(cartName, cartPrice, itemName, itemPrice);
 
-      cartText += " \n\nItem Name: " + itemName + " \nPrice: $" + itemPrice + "\nRemove";
+      cartText += " \nItem Name: " + itemName + " \nPrice: $" + itemPrice + "\nREMOVE\n";
       document.getElementById("cart-start").innerText = cartText;
   });
 }
