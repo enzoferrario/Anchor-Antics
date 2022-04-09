@@ -75,6 +75,7 @@ p {
 #cart-start {
   background-color: #8FBC8F;
   border: dashed;
+  border-color: black;
 }
 
 img {
@@ -85,7 +86,7 @@ img {
 }
 
 @media (min-width: 1235px) {
-  section li{
+  section li {
     display: flex;
     flex-direction: column;
     justify-content: center;
