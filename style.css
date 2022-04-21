@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 6vw;
 }
 
 nav {
@@ -115,6 +115,17 @@ main {
 button {
   margin-top: .625em;
   font-weight: 500;
+}
+
+#review-page main{
+  display: grid;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+#review-page section {
+  border-left: 0.51em solid #008a7c;
+  margin-bottom: 0.5em;
 }
 
 @media (min-width: 660px) {
