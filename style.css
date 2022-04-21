@@ -114,18 +114,13 @@ main {
   justify-content: space-between;
 }
 
+button {
+  margin-top: .625em;
+  font-weight: 500;
+}
+
 @media (min-width: 660px) {
   h1 {
     font-size: 5em;
   }
 }
-
-/*
-@media (min-width: 1235px) {
-  section li {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-}
-*/
