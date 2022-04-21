@@ -82,8 +82,8 @@ addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', 
     bt.addEventListener('click', function(){
 
       document.getElementById(proof).innerText = "Added to Cart!"
-      cart.push(anchors[pos])
-      localStorage.setItem("Cart", cart);
+      cart.push(anchors[pos-1])
+      //localStorage.setItem("Cart", cart);
       //addToCart(cartName, cartPrice, itemName, itemPrice);
 
       var c = 'c';
