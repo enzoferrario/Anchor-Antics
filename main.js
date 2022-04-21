@@ -62,42 +62,38 @@ if (html.id === 'home-page') {
   var cartText = " "
   var itemText = " "
 
-addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700.00, 1)
-addToCartButtons("Add-to-Cart-two", "cart-name-two", 'cart-price-two', "Oceans Gem", 450.99, 2)
-addToCartButtons("Add-to-Cart-three", "cart-name-three", 'cart-price-three', "The Grappler", 29.99, 3)
-addToCartButtons("Add-to-Cart-four", "cart-name-four", 'cart-price-four', "Black Pearl", 75.99, 4)
-addToCartButtons("Add-to-Cart-five", "cart-name-five", 'cart-price-five', "Four Pronged Glory", 45.99, 5)
-addToCartButtons("Add-to-Cart-six", "cart-name-six", 'cart-price-six', "Modern", 49.99, 6)
-addToCartButtons("Add-to-Cart-seven", "cart-name-seven", 'cart-price-seven', "Pirates Treasure", 12000.00, 7)
-addToCartButtons("Add-to-Cart-eight", "cart-name-eight", 'cart-price-eight', "Rusted Beauty", 9.99, 8)
-addToCartButtons("Add-to-Cart-nine", "cart-name-nine", 'cart-price-nine', "The Spoon", 43.99, 9)
-addToCartButtons("Add-to-Cart-ten", "cart-name-ten", 'cart-price-ten', "Wooden Master", 7.99, 10)
-addToCartButtons("Add-to-Cart-eleven", "cart-name-eleven", 'cart-price-eleven', "Golden Modern", 15000.00, 11)
-addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', "Almost an Anchor", 5.00, 12)
+addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700.00, 1, "proof-one")
+addToCartButtons("Add-to-Cart-two", "cart-name-two", 'cart-price-two', "Oceans Gem", 450.99, 2, "proof-two")
+addToCartButtons("Add-to-Cart-three", "cart-name-three", 'cart-price-three', "The Grappler", 29.99, 3, "proof-three")
+addToCartButtons("Add-to-Cart-four", "cart-name-four", 'cart-price-four', "Black Pearl", 75.99, 4, "proof-four")
+addToCartButtons("Add-to-Cart-five", "cart-name-five", 'cart-price-five', "Four Pronged Glory", 45.99, 5, "proof-five")
+addToCartButtons("Add-to-Cart-six", "cart-name-six", 'cart-price-six', "Modern", 49.99, 6, "proof-six")
+addToCartButtons("Add-to-Cart-seven", "cart-name-seven", 'cart-price-seven', "Pirates Treasure", 12000.00, 7, "proof-seven")
+addToCartButtons("Add-to-Cart-eight", "cart-name-eight", 'cart-price-eight', "Rusted Beauty", 9.99, 8, "proof-eight")
+addToCartButtons("Add-to-Cart-nine", "cart-name-nine", 'cart-price-nine', "The Spoon", 43.99, 9, "proof-nine")
+addToCartButtons("Add-to-Cart-ten", "cart-name-ten", 'cart-price-ten', "Wooden Master", 7.99, 10, "proof-ten")
+addToCartButtons("Add-to-Cart-eleven", "cart-name-eleven", 'cart-price-eleven', "Golden Modern", 15000.00, 11, "proof-eleven")
+addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', "Almost an Anchor", 5.00, 12, "proof-twelve")
 
 
-  function addToCartButtons (bt, cartName, cartPrice, itemName, itemPrice, pos){
+  function addToCartButtons (bt, cartName, cartPrice, itemName, itemPrice, pos, proof){
 
     var bt = document.getElementById(bt);
     bt.addEventListener('click', function(){
 
+      document.getElementById(proof).innerText = "Added to Cart!"
       cart.push(anchors[pos])
       localStorage.setItem("Cart", cart);
       //addToCart(cartName, cartPrice, itemName, itemPrice);
 
-
-
-      cartText += " \n\nItem Name: " + itemName + " \nPrice: $" + itemPrice + "\nRemove";
-      document.getElementById("cart-start").innerText = cartText;
-
       var c = 'c';
 
-      for (var i = 1; i < cart.length; i++){
+      for (var i = 0; i < cart.length; i++){
 
           var c = c + i;
 
-          document.getElementById(c).innerText = "Item name: " + itemName + " Price: " + itemPrice;
-
+          document.getElementById(c).innerText = "Item name: " + cart[i].name + " Price: " + cart[i].price;
+          localStorage.setItem(c, cart[i])
           var c = 'c';
 
 
