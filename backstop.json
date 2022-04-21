@@ -21,9 +21,9 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "Review Page",
+      "label": "Shipping Page",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://localhost:8080/review/",
+      "url": "http://localhost:8080/shipping/",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
