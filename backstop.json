@@ -21,9 +21,9 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "Shipping Page",
+      "label": "Payment Page",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://localhost:8080/shipping/",
+      "url": "http://localhost:8080/payment/",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
