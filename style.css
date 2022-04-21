@@ -17,7 +17,7 @@ html {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 10vw;
   background-color: #00ffe5;
   padding: 0.25em;
 }
@@ -36,7 +36,7 @@ nav li {
   text-align: center;
   padding: 1em;
   text-indent: 0;
-  font-size: 2em;
+  font-size: 4vw;
 }
 
 nav li:hover {
@@ -70,6 +70,7 @@ section {
   flex-wrap: nowrap;
   justify-content: space-between;
   background-color: #d9f0a3;
+  font-size: 1.8vw;
 }
 
 #content {
@@ -111,6 +112,12 @@ main {
   flex-wrap: nowrap;
   flex-direction: column 2;
   justify-content: space-between;
+}
+
+@media (min-width: 660px) {
+  h1 {
+    font-size: 5em;
+  }
 }
 
 /*
