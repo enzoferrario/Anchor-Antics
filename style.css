@@ -83,7 +83,6 @@ p {
 #content section {
   border-left: 0.51em solid #008a7c;
   margin-bottom: 0.5em;
-  max-width: 70%;
 }
 
 #cart {
@@ -106,13 +105,13 @@ main {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column 2;
+  justify-content: space-between;
 }
 
 @media (min-width: 1235px) {
   section li {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
   }
 }
