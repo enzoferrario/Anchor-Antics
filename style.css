@@ -17,7 +17,7 @@ html {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 10vw;
   background-color: #00ffe5;
   padding: 0.25em;
 }
@@ -36,7 +36,7 @@ nav li {
   text-align: center;
   padding: 1em;
   text-indent: 0;
-  font-size: 2em;
+  font-size: 4vw;
 }
 
 nav li:hover {
@@ -64,6 +64,15 @@ section {
   padding: 2em;
 }
 
+#titles{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: #d9f0a3;
+  font-size: 1.8vw;
+}
+
 #content {
   padding: 0.5em;
 }
@@ -77,10 +86,15 @@ p {
   margin-bottom: 0.5em;
 }
 
-#cart-start {
+#cart {
   background-color: #8FBC8F;
-  border: dashed;
-  border-color: black;
+  display: flex;
+  flex-flow: column;
+}
+
+#cart-items {
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -89,14 +103,22 @@ img {
   height: 50%;
   width: 50%;
   object-fit: contain;
-
 }
 
-@media (min-width: 1235px) {
-  section li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column 2;
+  justify-content: space-between;
+}
+
+button {
+  margin-top: .625em;
+  font-weight: 500;
+}
+
+@media (min-width: 660px) {
+  h1 {
+    font-size: 5em;
   }
 }
