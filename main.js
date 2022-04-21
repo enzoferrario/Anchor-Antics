@@ -60,6 +60,7 @@ if (html.id === 'home-page') {
 
   var cart = [];
   var cartText = " "
+  var itemText = " "
 
 addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700.00, 1)
 addToCartButtons("Add-to-Cart-two", "cart-name-two", 'cart-price-two', "Oceans Gem", 450.99, 2)
@@ -84,8 +85,25 @@ addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', 
       localStorage.setItem("Cart", cart);
       //addToCart(cartName, cartPrice, itemName, itemPrice);
 
-      cartText += " \nItem Name: " + itemName + " \nPrice: $" + itemPrice + "\nREMOVE\n";
+
+
+      cartText += " \n\nItem Name: " + itemName + " \nPrice: $" + itemPrice + "\nRemove";
       document.getElementById("cart-start").innerText = cartText;
+
+      var c = 'c';
+
+      for (var i = 1; i < cart.length; i++){
+
+          var c = c + i;
+
+          document.getElementById(c).innerText = "Item name: " + itemName + " Price: " + itemPrice;
+
+          var c = 'c';
+
+
+      }
+
+      //Still need to figure out way to make a fucnctioning remove button and remove all
   });
 }
 }
