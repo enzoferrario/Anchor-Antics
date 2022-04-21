@@ -88,8 +88,6 @@ p {
 
 #cart {
   background-color: #8FBC8F;
-  border: dashed;
-  border-color: black;
   display: flex;
   flex-flow: column;
 }
