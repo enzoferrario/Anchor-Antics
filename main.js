@@ -62,6 +62,24 @@ if (html.id === 'home-page') {
   var cartText = " "
   var itemText = " "
 
+  document.getElementById("r0").style.visibility = 'hidden';
+  document.getElementById("r1").style.visibility = 'hidden';
+  document.getElementById("r2").style.visibility = 'hidden';
+  document.getElementById("r3").style.visibility = 'hidden';
+  document.getElementById("r4").style.visibility = 'hidden';
+  document.getElementById("r5").style.visibility = 'hidden';
+  document.getElementById("r6").style.visibility = 'hidden';
+  document.getElementById("r7").style.visibility = 'hidden';
+  document.getElementById("r8").style.visibility = 'hidden';
+  document.getElementById("r9").style.visibility = 'hidden';
+  document.getElementById("r10").style.visibility = 'hidden';
+  document.getElementById("r11").style.visibility = 'hidden';
+  document.getElementById("r12").style.visibility = 'hidden';
+  document.getElementById("r13").style.visibility = 'hidden';
+  document.getElementById("r14").style.visibility = 'hidden';
+  document.getElementById("r15").style.visibility = 'hidden';
+
+
 addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700.00, 1, "proof-one")
 addToCartButtons("Add-to-Cart-two", "cart-name-two", 'cart-price-two', "Oceans Gem", 450.99, 2, "proof-two")
 addToCartButtons("Add-to-Cart-three", "cart-name-three", 'cart-price-three', "The Grappler", 29.99, 3, "proof-three")
@@ -75,6 +93,7 @@ addToCartButtons("Add-to-Cart-ten", "cart-name-ten", 'cart-price-ten', "Wooden M
 addToCartButtons("Add-to-Cart-eleven", "cart-name-eleven", 'cart-price-eleven', "Golden Modern", 15000.00, 11, "proof-eleven")
 addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', "Almost an Anchor", 5.00, 12, "proof-twelve")
 
+removeItems("r2");
 
   function addToCartButtons (bt, cartName, cartPrice, itemName, itemPrice, pos, proof){
 
@@ -87,14 +106,18 @@ addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', 
       //addToCart(cartName, cartPrice, itemName, itemPrice);
 
       var c = 'c';
+      var r = 'r';
 
       for (var i = 0; i < cart.length; i++){
 
           var c = c + i;
+          var r = r + i
 
           document.getElementById(c).innerText = "Item name: " + cart[i].name + " Price: " + cart[i].price;
           localStorage.setItem(c, cart[i])
+          document.getElementById(r).style.visibility = "visible";
           var c = 'c';
+          var r = 'r';
 
 
       }
@@ -102,23 +125,37 @@ addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', 
       //Still need to figure out way to make a fucnctioning remove button and remove all
   });
 }
+
+
+  function removeItems (button){
+
+    var removeBT = document.getElementById(button);
+    removeBT.addEventListener('click', function(){
+
+        cart[2] = ""
+        document.getElementById(button).style.visibility = 'hidden';
+
+
+
+
+
+
+
+    });
+
+
+
+  }
+
+
 }
 
 
 
 //Not really needed anymore, but keeping in case needed in the future
-function addToCart (cartName, cartPrice, itemName, itemPrice){
-
-document.getElementById(cartName).innerText = itemName
-document.getElementById(cartPrice).innerText = itemPrice
-
-}
-
-function removeButton (bt){
 
 
 
-}
 /*
   var numOne = Math.floor(Math.random() * (10 - 0) + 0);
   var numTwo = Math.floor(Math.random() * (10 - 0) + 0);
