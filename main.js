@@ -43,7 +43,7 @@ var anchors = [
   },
 
   {
-    name:"Golden Modern", price: 15.00, weight:360, image:"assets/golden-modern.png"
+    name:"Golden Modern", price: 15000.00, weight:360, image:"assets/golden-modern.png"
   },
 
   {
@@ -53,7 +53,6 @@ var anchors = [
 
 ]
 
-//var cart = [[item1, item2], [item1,item2]];
 
 
 if (html.id === 'home-page') {
@@ -154,6 +153,7 @@ contBut.addEventListener('click', function(){
     var bt = document.getElementById(bt);
     bt.addEventListener('click', function(){
 
+
       document.getElementById(proof).innerText = "Added to Cart!"
       cart.push(anchors[pos])
       //localStorage.setItem("Cart", cart);
@@ -179,7 +179,6 @@ contBut.addEventListener('click', function(){
 
       }
 
-      //Still need to figure out way to make a fucnctioning remove button and remove all
   });
 }
 
