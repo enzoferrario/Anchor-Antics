@@ -122,7 +122,11 @@ contBut.addEventListener('click', function(){
     }
 
   }
-  localStorage.setItem("price", total);
+
+  var tax = total * .0625;
+  var totalWithTax = total + (total*.0625)
+  localStorage.setItem("tax", tax);
+  localStorage.setItem("price", totalWithTax);
 
   var count = 0;
   var c = 'c'
@@ -274,7 +278,8 @@ if (html.id === 'review-page') {
     }
 
 
-
+    let tax = localStorage.getItem("tax");
+    document.getElementById("tax").innerText = "Tax: " + tax;
 
     let total = localStorage.getItem("price");
     document.getElementById("total").innerText = "Total: " + total;
