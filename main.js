@@ -124,7 +124,7 @@ contBut.addEventListener('click', function(){
   }
   localStorage.setItem("price", total);
 
-
+  var count = 0;
   var c = 'c'
   for (var i = 0; i < cart.length; i++){
 
@@ -133,14 +133,14 @@ contBut.addEventListener('click', function(){
     if (cart[i] != ''){
 
       localStorage.setItem(c, cart[i].name + ": " + cart[i].price)
-
+      count++;
 
     }
 
     var c = 'c'
   }
 
-
+  localStorage.setItem("count", count);
 
 });
 
@@ -260,11 +260,16 @@ if (html.id === 'shipping-page') {
 
 if (html.id === 'review-page') {
 
+    var count = localStorage.getItem('count');
     var c = 'c';
-    for (var i = 0; i < 15; i++){
+    for (var i = 0; i < count; i++){
       c = c + i;
-      let item = localStorage.getItem(c)
+      var item = localStorage.getItem(c)
+
+      if(item != 'undefined'){
       document.getElementById(c).innerText = item;
+    }
+      var c = 'c'
 
     }
 
@@ -272,7 +277,7 @@ if (html.id === 'review-page') {
 
 
     let total = localStorage.getItem("price");
-    document.getElementById("total").innerText = total;
+    document.getElementById("total").innerText = "Total: " + total;
 
 
 
