@@ -1,9 +1,9 @@
 'use strict';
 
 describe('The Cart Page', function(){
-  it('should prove that true is true', function(browser){
+  it('Should have expected title', function(browser){
     browser.url(`${browser.launchUrl}`)
-    .assert(true)
+    .assert.titleEquals('Anchorage Anchors Anchorporating')
     .end();
 
   });
