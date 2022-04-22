@@ -125,18 +125,19 @@ contBut.addEventListener('click', function(){
   localStorage.setItem("price", total);
 
 
-
+  var c = 'c'
   for (var i = 0; i < cart.length; i++){
 
-    var c = 'c'
+    var c = c + i;
+
     if (cart[i] != ''){
 
-      localStorage(c)
+      localStorage.setItem(c, cart[i].name + ": " + cart[i].price)
 
 
     }
 
-
+    var c = 'c'
   }
 
 
@@ -258,6 +259,15 @@ if (html.id === 'shipping-page') {
 
 
 if (html.id === 'review-page') {
+
+    var c = 'c';
+    for (var i = 0; i < 15; i++){
+      c = c + i;
+      let item = localStorage.getItem(c)
+      document.getElementById(c).innerText = item;
+
+    }
+
 
 
 
