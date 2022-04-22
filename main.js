@@ -43,7 +43,7 @@ var anchors = [
   },
 
   {
-    name:"Golden Modern", price: 15.00, weight:360, image:"assets/golden-modern.png"
+    name:"Golden Modern", price: 15000.00, weight:360, image:"assets/golden-modern.png"
   },
 
   {
@@ -53,7 +53,6 @@ var anchors = [
 
 ]
 
-//var cart = [[item1, item2], [item1,item2]];
 
 
 if (html.id === 'home-page') {
@@ -107,10 +106,53 @@ removeItems("r10", 10, "c10");
 removeItems("r11", 11, "c11");
 
 
+
+var contBut = document.getElementById('cont')
+contBut.addEventListener('click', function(){
+
+  var total = 0;
+
+  for (var i = 0; i < cart.length; i++){
+
+    if (cart[i] != ''){
+
+      total = total + cart[i].price
+
+    }
+
+  }
+
+  var tax = total * .0625;
+  var totalWithTax = total + (total*.0625)
+  localStorage.setItem("tax", tax);
+  localStorage.setItem("price", totalWithTax);
+
+  var count = 0;
+  var c = 'c'
+  for (var i = 0; i < cart.length; i++){
+
+    var c = c + i;
+
+    if (cart[i] != ''){
+
+      localStorage.setItem(c, cart[i].name + ": " + cart[i].price)
+      count++;
+
+    }
+
+    var c = 'c'
+  }
+
+  localStorage.setItem("count", count);
+
+});
+
+
   function addToCartButtons (bt, cartName, cartPrice, itemName, itemPrice, pos, proof){
 
     var bt = document.getElementById(bt);
     bt.addEventListener('click', function(){
+
 
       document.getElementById(proof).innerText = "Added to Cart!"
       cart.push(anchors[pos])
@@ -128,7 +170,6 @@ removeItems("r11", 11, "c11");
 
           if (cart[i] != ''){
           document.getElementById(c).innerText = "Item name: " + cart[i].name + " Price: " + cart[i].price;
-          localStorage.setItem(c, cart[i].itemName)
           document.getElementById(r).style.visibility = "visible";
 
           }
@@ -138,9 +179,11 @@ removeItems("r11", 11, "c11");
 
       }
 
-      //Still need to figure out way to make a fucnctioning remove button and remove all
   });
 }
+
+
+
 
 
   function removeItems (button, pos, item){
@@ -220,9 +263,26 @@ if (html.id === 'shipping-page') {
 
 if (html.id === 'review-page') {
 
+    var count = localStorage.getItem('count');
+    var c = 'c';
+    for (var i = 0; i < count; i++){
+      c = c + i;
+      var item = localStorage.getItem(c)
 
-    let itemOne = localStorage.getItem("c0");
-    document.getElementById("c0").innerText = itemOne;
+      if(item != 'undefined'){
+      document.getElementById(c).innerText = item;
+    }
+      var c = 'c'
+
+    }
+
+
+    let tax = localStorage.getItem("tax");
+    document.getElementById("tax").innerText = "Tax: " + tax;
+
+    let total = localStorage.getItem("price");
+    document.getElementById("total").innerText = "Total: " + total;
+
 
 
     let shipping = localStorage.getItem("shipping")

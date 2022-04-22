@@ -42,3 +42,6 @@ compare/output/config\.js
 
 
 node_modules/directory
+node_modules
+logs/
+test_output/
