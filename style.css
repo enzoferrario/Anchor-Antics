@@ -39,6 +39,10 @@ nav li {
   font-size: 4vw;
 }
 
+form section ul li {
+  margin: 0.625em;
+}
+
 nav li:hover {
   background-color: #008a7c;
 }
@@ -59,16 +63,12 @@ input {
   width: 100%;
 }
 
-form section ul li {
-  margin: 0.625em;
-}
-
 section {
   background-color: #5cffbe;
   padding: 2em;
 }
 
-#titles{
+#titles {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -117,11 +117,11 @@ main {
 }
 
 button {
-  margin-top: .625em;
+  margin-top: 0.625em;
   font-weight: 500;
 }
 
-#review-page main{
+#review-page main {
   display: grid;
   margin-right: 1em;
   margin-left: 1em;
