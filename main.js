@@ -128,7 +128,7 @@ removeItems("r11", 11, "c11");
 
           if (cart[i] != ''){
           document.getElementById(c).innerText = "Item name: " + cart[i].name + " Price: " + cart[i].price;
-          localStorage.setItem(c, cart[i])
+          localStorage.setItem(c, cart[i].itemName)
           document.getElementById(r).style.visibility = "visible";
 
           }
@@ -153,106 +153,28 @@ removeItems("r11", 11, "c11");
         document.getElementById(item).innerText = "";
 
 
-
-
-
-
-
     });
-
-
-
   }
-
-
 }
 
 
-
-//Not really needed anymore, but keeping in case needed in the future
-
-
-
-/*
-  var numOne = Math.floor(Math.random() * (10 - 0) + 0);
-  var numTwo = Math.floor(Math.random() * (10 - 0) + 0);
-  var numThree = Math.floor(Math.random() * (10 - 0) + 0);
-  var numFour = Math.floor(Math.random() * (10 - 0) + 0);
-
-  var itemOne = anchors[numOne];
-  var itemTwo = anchors[numTwo];
-  var itemThree = anchors[numThree];
-  var itemFour = anchors[numFour];
+if (html.id === 'shipping-page') {
+  console.log("Shipping Page")
+  localStorage.setItem("Test", "Testing this")
 
 
+  var contBut = document.getElementById("cont");
+  contBut.addEventListener('click', function(){
 
+    var shipName = document.getElementById('ship-name').value;
+    var shipAddress = document.getElementById("ship-address-one").value;
+    var shipAddressTwo = document.getElementById("ship-address-two").value;
 
-  document.addEventListener("load", cart());
+    var sh = shipName + " " + shipAddress + " " + shipAddressTwo;
+    localStorage.setItem('shipping', sh);
+    console.log(sh);
 
-
-  function cart(){
-
-
-    try{
-    //var num = Math.floor(Math.random() * (10 - 0) + 0);
-
-    document.querySelector('#name-one').innerHTML = "Name: " + itemOne.name;
-    document.querySelector('#price-one').innerHTML = "Price: " + itemOne.price;
-    document.querySelector('#weight-one').innerHTML = "Weight: " + itemOne.weight;
-    document.querySelector('#image-one').src = itemOne.image;
-    //var itemOne = inventory[numOne];
-
-    //var num = Math.floor(Math.random() * (10 - 0) + 0);
-
-    document.querySelector('#name-two').innerHTML = "Name: " + itemTwo.name;
-    document.querySelector('#price-two').innerHTML = "Price: " + itemTwo.price;
-    document.querySelector('#weight-two').innerHTML = "Weight: " + itemTwo.weight;
-    document.querySelector('#image-two').src = itemTwo.image;
-    //var itemTwo = inventory[numTwo];
-
-
-
-    //var num = Math.floor(Math.random() * (10 - 0) + 0);
-
-    document.querySelector('#name-three').innerHTML = "Name: " + itemThree.name;
-    document.querySelector('#price-three').innerHTML = "Price: " + itemThree.price;
-    document.querySelector('#weight-three').innerHTML = "Weight: " + itemThree.weight;
-    document.querySelector('#image-three').src = itemThree.image;
-    //var itemThree = inventory[numThree];
-
-
-
-    //var num = Math.floor(Math.random() * (10 - 0) + 0);
-
-    document.querySelector('#name-four').innerHTML = "Name: " + itemFour.name;
-    document.querySelector('#price-four').innerHTML = "Price: " + itemFour.price;
-    document.querySelector('#weight-four').innerHTML = "Weight: " + itemFour.weight;
-    document.querySelector('#image-four').src = itemFour.image;
-    //var itemFour = inventory[numFour];
-  }
-  catch(err){
-
-  }
-
-  }
-
-
-}
-*/
-/*Not Currently Using this, but will in the Future
-if (html.id === 'review-page') {
-
-
-  var viewOrderButton = document.getElementById('view-order');
-
-  viewOrderButton.addEventListener('click', function(){
-
-    console.log("Final Button")
-    document.getElementById('item_one_final').innerText = itemOne.name;
-    document.getElementById('item_two_final').innerText = itemTwo.name;
-    document.getElementById('item_three_final').innerText = itemThree.name;
-    document.getElementById('item_four_final').innerText = itemFour.name;
-
+    localStorage.setItem("Test", "Testing this two")
 
 
 
@@ -262,10 +184,30 @@ if (html.id === 'review-page') {
 
 
 
+}
+
+
+
+if (html.id === 'review-page') {
+
+
+    let itemOne = localStorage.getItem("c0");
+    document.getElementById("c0").innerText = itemOne;
+
+
+    let shipping = localStorage.getItem("shipping")
+    document.getElementById("ship").innerText = shipping;
+    console.log(shipping);
+
+    let testingItem = localStorage.getItem("Test");
+    document.getElementById("pay").innerText = testingItem;
+
+
+
 
 }
 
-*/
+
 
 
 /*
