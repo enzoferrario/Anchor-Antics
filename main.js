@@ -158,9 +158,34 @@ removeItems("r11", 11, "c11");
 }
 
 
+
+if (html.id === 'payment-page'){
+  console.log("payment Page");
+
+  var contBut = document.getElementById("cont");
+  contBut = addEventListener('click', function(){
+
+    var cardType = document.getElementById("card-type").value
+    var cardNumber = document.getElementById("card-number").value
+    var cardName = document.getElementById("name-on-card").value
+    var billingOne = document.getElementById("billing-address-one").value
+    var billingTwo = document.getElementById("billing-address-two").value
+    var exp = document.getElementById("experation").value
+    var secCode = document.getElementById("sec-code").value
+
+    var pay = cardType + " " + cardNumber + " " + cardName + " " + billingOne + " " + billingTwo + " " + exp + " " + secCode;
+    localStorage.setItem('payment', pay)
+
+
+
+
+
+
+  });
+}
+
 if (html.id === 'shipping-page') {
   console.log("Shipping Page")
-  localStorage.setItem("Test", "Testing this")
 
 
   var contBut = document.getElementById("cont");
@@ -169,12 +194,17 @@ if (html.id === 'shipping-page') {
     var shipName = document.getElementById('ship-name').value;
     var shipAddress = document.getElementById("ship-address-one").value;
     var shipAddressTwo = document.getElementById("ship-address-two").value;
+    var shipCity = document.getElementById("ship-city").value
+    var shipCountry = document.getElementById("scountry").value
+    var shipZip = document.getElementById("szip").value
+    var shipState = document.getElementById("sstate").value
+    var shipPo = document.getElementById("ship-po").value
 
-    var sh = shipName + " " + shipAddress + " " + shipAddressTwo;
+
+    var sh = shipName + " " + shipAddress + " " + shipAddressTwo + " " + shipCity + " " + shipCountry + " " + shipZip + " " + shipState + " " + shipPo;
     localStorage.setItem('shipping', sh);
     console.log(sh);
 
-    localStorage.setItem("Test", "Testing this two")
 
 
 
@@ -199,8 +229,8 @@ if (html.id === 'review-page') {
     document.getElementById("ship").innerText = shipping;
     console.log(shipping);
 
-    let testingItem = localStorage.getItem("Test");
-    document.getElementById("pay").innerText = testingItem;
+    let payment = localStorage.getItem("payment");
+    document.getElementById("pay").innerText = payment;
 
 
 
