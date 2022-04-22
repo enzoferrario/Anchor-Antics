@@ -107,6 +107,43 @@ removeItems("r10", 10, "c10");
 removeItems("r11", 11, "c11");
 
 
+
+var contBut = document.getElementById('cont')
+contBut.addEventListener('click', function(){
+
+  var total = 0;
+
+  for (var i = 0; i < cart.length; i++){
+
+    if (cart[i] != ''){
+
+      total = total + cart[i].price
+
+    }
+
+  }
+  localStorage.setItem("price", total);
+
+
+
+  for (var i = 0; i < cart.length; i++){
+
+    var c = 'c'
+    if (cart[i] != ''){
+
+      localStorage(c)
+
+
+    }
+
+
+  }
+
+
+
+});
+
+
   function addToCartButtons (bt, cartName, cartPrice, itemName, itemPrice, pos, proof){
 
     var bt = document.getElementById(bt);
@@ -128,7 +165,6 @@ removeItems("r11", 11, "c11");
 
           if (cart[i] != ''){
           document.getElementById(c).innerText = "Item name: " + cart[i].name + " Price: " + cart[i].price;
-          localStorage.setItem(c, cart[i].itemName)
           document.getElementById(r).style.visibility = "visible";
 
           }
@@ -141,6 +177,9 @@ removeItems("r11", 11, "c11");
       //Still need to figure out way to make a fucnctioning remove button and remove all
   });
 }
+
+
+
 
 
   function removeItems (button, pos, item){
@@ -221,8 +260,10 @@ if (html.id === 'shipping-page') {
 if (html.id === 'review-page') {
 
 
-    let itemOne = localStorage.getItem("c0");
-    document.getElementById("c0").innerText = itemOne;
+
+    let total = localStorage.getItem("price");
+    document.getElementById("total").innerText = total;
+
 
 
     let shipping = localStorage.getItem("shipping")
