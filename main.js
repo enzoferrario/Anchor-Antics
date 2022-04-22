@@ -80,20 +80,32 @@ if (html.id === 'home-page') {
   document.getElementById("r15").style.visibility = 'hidden';
 
 
-addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700.00, 1, "proof-one")
-addToCartButtons("Add-to-Cart-two", "cart-name-two", 'cart-price-two', "Oceans Gem", 450.99, 2, "proof-two")
-addToCartButtons("Add-to-Cart-three", "cart-name-three", 'cart-price-three', "The Grappler", 29.99, 3, "proof-three")
-addToCartButtons("Add-to-Cart-four", "cart-name-four", 'cart-price-four', "Black Pearl", 75.99, 4, "proof-four")
-addToCartButtons("Add-to-Cart-five", "cart-name-five", 'cart-price-five', "Four Pronged Glory", 45.99, 5, "proof-five")
-addToCartButtons("Add-to-Cart-six", "cart-name-six", 'cart-price-six', "Modern", 49.99, 6, "proof-six")
-addToCartButtons("Add-to-Cart-seven", "cart-name-seven", 'cart-price-seven', "Pirates Treasure", 12000.00, 7, "proof-seven")
-addToCartButtons("Add-to-Cart-eight", "cart-name-eight", 'cart-price-eight', "Rusted Beauty", 9.99, 8, "proof-eight")
-addToCartButtons("Add-to-Cart-nine", "cart-name-nine", 'cart-price-nine', "The Spoon", 43.99, 9, "proof-nine")
-addToCartButtons("Add-to-Cart-ten", "cart-name-ten", 'cart-price-ten', "Wooden Master", 7.99, 10, "proof-ten")
-addToCartButtons("Add-to-Cart-eleven", "cart-name-eleven", 'cart-price-eleven', "Golden Modern", 15000.00, 11, "proof-eleven")
-addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', "Almost an Anchor", 5.00, 12, "proof-twelve")
+addToCartButtons("Add-to-Cart-one", "cart-name-one", 'cart-price-one', "Built for a Battleship", 1700.00, 0, "proof-one")
+addToCartButtons("Add-to-Cart-two", "cart-name-two", 'cart-price-two', "Oceans Gem", 450.99, 1, "proof-two")
+addToCartButtons("Add-to-Cart-three", "cart-name-three", 'cart-price-three', "The Grappler", 29.99, 2, "proof-three")
+addToCartButtons("Add-to-Cart-four", "cart-name-four", 'cart-price-four', "Black Pearl", 75.99, 3, "proof-four")
+addToCartButtons("Add-to-Cart-five", "cart-name-five", 'cart-price-five', "Four Pronged Glory", 45.99, 4, "proof-five")
+addToCartButtons("Add-to-Cart-six", "cart-name-six", 'cart-price-six', "Modern", 49.99, 5, "proof-six")
+addToCartButtons("Add-to-Cart-seven", "cart-name-seven", 'cart-price-seven', "Pirates Treasure", 12000.00, 6, "proof-seven")
+addToCartButtons("Add-to-Cart-eight", "cart-name-eight", 'cart-price-eight', "Rusted Beauty", 9.99, 7, "proof-eight")
+addToCartButtons("Add-to-Cart-nine", "cart-name-nine", 'cart-price-nine', "The Spoon", 43.99, 8, "proof-nine")
+addToCartButtons("Add-to-Cart-ten", "cart-name-ten", 'cart-price-ten', "Wooden Master", 7.99, 9, "proof-ten")
+addToCartButtons("Add-to-Cart-eleven", "cart-name-eleven", 'cart-price-eleven', "Golden Modern", 15000.00, 10, "proof-eleven")
+addToCartButtons("Add-to-Cart-twelve", "cart-name-twelve", 'cart-price-twelve', "Almost an Anchor", 5.00, 11, "proof-twelve")
 
-removeItems("r2");
+removeItems("r0", 0, "c0");
+removeItems("r1", 1, "c1");
+removeItems("r2", 2, "c2");
+removeItems("r3", 3, "c3");
+removeItems("r4", 4, "c4");
+removeItems("r5", 5, "c5");
+removeItems("r6", 6, "c6");
+removeItems("r7", 7, "c7");
+removeItems("r8", 8, "c8");
+removeItems("r9", 9, "c9");
+removeItems("r10", 10, "c10");
+removeItems("r11", 11, "c11");
+
 
   function addToCartButtons (bt, cartName, cartPrice, itemName, itemPrice, pos, proof){
 
@@ -101,7 +113,7 @@ removeItems("r2");
     bt.addEventListener('click', function(){
 
       document.getElementById(proof).innerText = "Added to Cart!"
-      cart.push(anchors[pos-1])
+      cart.push(anchors[pos])
       //localStorage.setItem("Cart", cart);
       //addToCart(cartName, cartPrice, itemName, itemPrice);
 
@@ -113,9 +125,13 @@ removeItems("r2");
           var c = c + i;
           var r = r + i
 
+
+          if (cart[i] != ''){
           document.getElementById(c).innerText = "Item name: " + cart[i].name + " Price: " + cart[i].price;
           localStorage.setItem(c, cart[i])
           document.getElementById(r).style.visibility = "visible";
+
+          }
           var c = 'c';
           var r = 'r';
 
@@ -127,13 +143,14 @@ removeItems("r2");
 }
 
 
-  function removeItems (button){
+  function removeItems (button, pos, item){
 
     var removeBT = document.getElementById(button);
     removeBT.addEventListener('click', function(){
 
-        cart[2] = ""
+        cart[pos] = ""
         document.getElementById(button).style.visibility = 'hidden';
+        document.getElementById(item).innerText = "";
 
 
 
