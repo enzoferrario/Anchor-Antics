@@ -122,8 +122,8 @@ contBut.addEventListener('click', function(){
 
   }
 
-  var tax = total * .0625;
-  var totalWithTax = total + (total*.0625)
+  var tax = Math.round(100*total*.0625)/100;
+  var totalWithTax = Math.round(100*(total + (total*.0625)))/100;
   localStorage.setItem("tax", tax);
   localStorage.setItem("price", totalWithTax);
 
